@@ -142,3 +142,24 @@ img {
         }
     }
 }
+
+.button-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    &__button {
+        + .button-list__button {
+            margin-left: 15px;
+        }
+    }
+}
+.body-item {
+    display: flex;
+    &__header {
+        flex: 1 0 5%;
+    }
+    &__body {
+        flex: 1 0 95%;
+    }
+}

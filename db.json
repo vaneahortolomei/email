@@ -1,0 +1,40 @@
+{
+  "emails": [
+    {
+      "id": 3,
+      "from": "test3@gmail.com",
+      "subject": "song about lena",
+      "body": "Express provides a thin layer of fundamental web application features, without obscuring Node.js features that you know and love.",
+      "time": "",
+      "archived": false,
+      "read": false
+    },
+    {
+      "id": 2,
+      "from": "test2@gmail.com",
+      "subject": "song about jane",
+      "body": "With a myriad of HTTP utility methods and middleware at your disposal, creating a robust API is quick and easy.",
+      "time": "",
+      "archived": true,
+      "read": false
+    },
+    {
+      "id": 1,
+      "from": "test1@gmail.com",
+      "subject": "song about mary",
+      "body": "Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+      "time": "",
+      "archived": true,
+      "read": true
+    },
+    {
+      "id": 4,
+      "from": "test4@gmail.com",
+      "subject": "song about any",
+      "body": "Many popular frameworks are based on Express.",
+      "time": "",
+      "archived": true,
+      "read": true
+    }
+  ]
+}

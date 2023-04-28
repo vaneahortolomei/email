@@ -1,73 +1,83 @@
 <template>
-    <div class="emails-page">
-        <header class="emails-page__header header">
-            <h2 class="header__title">Emails</h2>
-            <p class="header__info">{{ filteredEmails.length }} messages</p>
-        </header>
-        <div class="emails-page__tab tab">
-            <button
-                class="button button--violet tab__button"
-                @click="selectScreen('inbox')">
-                Inbox
-            </button>
-            <button class="button button--violet tab__button"
-                    @click="selectScreen('archived')">
-                Archived Emails
-            </button>
-        </div>
-        <div class="list-wrapper">
-            <ActionList :emails="filteredEmails"/>
-        </div>
-
-        <ul
-            v-if="filteredEmails.length > 0"
-            class="emails-page__email-list email-list"
-        >
-            <li
-                v-for="email in filteredEmails"
-                :key="email.id"
-                class="email-list__item"
-                :class="{'email-list__item--active': email.read}"
-            >
-                <div class="email-item">
-                    <div class="email-item__header">
-                        <label for="checkbox"/>
-                        <input
-                            id="checkbox"
-                            type="checkbox"
-                            name="checkbox"
-                            :checked="archivedEmails.selected.has(email)"
-                            @click="archivedEmails.toggle(email)"
-                        >
-                    </div>
-                    <div class="email-item__body email-body">
-                        <div class="email-body__title" @click="openEmail(email)">
-                            {{ email.subject }}
-                        </div>
-                        <time class="email-body__time">{{ email.time }}</time>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <p
-            v-else
-        >
-            Inbox is empty
-        </p>
+  <div class="emails-page">
+    <header class="emails-page__header header">
+      <h2 class="header__title">
+        Emails
+      </h2>
+      <p class="header__info">
+        {{ filteredEmails.length }} messages
+      </p>
+    </header>
+    <div class="emails-page__tab tab">
+      <button
+        class="button button--violet tab__button"
+        @click="selectScreen('inbox')"
+      >
+        Inbox
+      </button>
+      <button
+        class="button button--violet tab__button"
+        @click="selectScreen('archived')"
+      >
+        Archived Emails
+      </button>
+    </div>
+    <div class="list-wrapper">
+      <ActionList :emails="filteredEmails" />
     </div>
 
-    <Modal
-        v-if="openBody"
-        @close-modal="openBody = null"
+    <ul
+      v-if="filteredEmails.length > 0"
+      class="emails-page__email-list email-list"
     >
-        <template
-            #modal-content
-        >
-            <EmailView
-                :email="openBody"
-            />
-        </template>
-    </Modal>
+      <li
+        v-for="email in filteredEmails"
+        :key="email.id"
+        class="email-list__item"
+        :class="{'email-list__item--active': email.read}"
+      >
+        <div class="email-item">
+          <div class="email-item__header">
+            <label for="checkbox" />
+            <input
+              id="checkbox"
+              type="checkbox"
+              name="checkbox"
+              :checked="archivedEmails.selected.has(email)"
+              @click="archivedEmails.toggle(email)"
+            >
+          </div>
+          <div class="email-item__body email-body">
+            <div
+              class="email-body__title"
+              @click="openEmail(email)"
+            >
+              {{ email.subject }}
+            </div>
+            <time class="email-body__time">{{ email.time }}</time>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <p
+      v-else
+    >
+      Inbox is empty
+    </p>
+  </div>
+
+  <Modal
+    v-if="openBody"
+    @close-modal="openBody = null"
+  >
+    <template
+      #modal-content
+    >
+      <EmailView
+        :email="openBody"
+      />
+    </template>
+  </Modal>
 </template>
 
 <script>

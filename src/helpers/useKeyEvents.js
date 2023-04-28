@@ -1,4 +1,4 @@
-import {onBeforeUnmount} from 'vue';
+import {onBeforeUnmount} from "vue";
 
 const useKeyDown = (keyGroup) => {
     
@@ -10,11 +10,11 @@ const useKeyDown = (keyGroup) => {
         });
     };
 
-    window.addEventListener('keydown', onKeyDown);
+    window.addEventListener("keydown", onKeyDown);
 
     onBeforeUnmount(() => {
-        window.removeEventListener('keydown', onKeyDown);
-    })
+        window.removeEventListener("keydown", onKeyDown);
+    });
 };
 
 export default useKeyDown;

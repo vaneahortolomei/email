@@ -2,55 +2,55 @@
   "emails": [
     {
       "id": 3,
-      "from": "test3@gmail.com",
-      "subject": "song about lena",
-      "body": "Express provides a thin layer of fundamental web application features, without obscuring Node.js features that you know and love.",
-      "time": "",
-      "archived": false,
-      "read": false
-    },
-    {
-      "id": 2,
-      "from": "test2@gmail.com",
-      "subject": "song about jane",
-      "body": "With a myriad of HTTP utility methods and middleware at your disposal, creating a robust API is quick and easy.",
-      "time": "",
-      "archived": false,
-      "read": false
-    },
-    {
-      "id": 1,
-      "from": "test1@gmail.com",
-      "subject": "song about mary",
-      "body": "Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
-      "time": "",
+      "from": "alert@indeed.com",
+      "subject": "Bricks Technologies Systems is hiring for Front end Engineer (HTML, CSS, Tailwind CSS). 21 more front end engineer remote jobs.",
+      "body": "This email contains secure links that are personalized for you. Please do not share this email or links with others.\nSalaries estimated if unavailable. When a job posting doesn't include a salary, we estimate it by looking at similar jobs. Estimated salaries are not endorsed by the companies offering those positions and may vary from actual salaries.",
+      "time": "10.30 AM",
       "archived": true,
       "read": true
     },
     {
-      "id": 4,
-      "from": "test4@gmail.com",
-      "subject": "song about any",
-      "body": "Many popular frameworks are based on Express.",
-      "time": "",
-      "archived": false,
+      "id": 2,
+      "from": "team@vueschool.io",
+      "subject": "Learn Nuxt 3, Vite.js, VueUse, DaisyUI, OpenAI, Cypress from the experts for FREE",
+      "body": "Last week, the Vue.js Forge Team finally let the cat out of the bag when they revealed you’re going to be building an AI-powered Social Media Post Generator. 😻 \n\nThis week, we’re pleased to give you the inside scoop on all the cool tech you’re going to be lucky enough to get hands-on experience with, as you build your project from the ground up.\n\nAfter all, that’s what Vue.js Forge is all about… giving you the chance to upgrade your skillset as you grow your capabilities. ",
+      "time": "10.30 AM",
+      "archived": true,
+      "read": true
+    },
+    {
+      "id": 1,
+      "from": "info@ccdata.io",
+      "subject": "Key Findings and Grades From CCData's April Exchange Benchmark",
+      "body": "In April 2023, 15% of analysed exchanges were deemed to have inadequate KYC practices according to Ciphertrace. While this is in part due to the closure of poor, underperforming exchanges, it is an improvement from 21% in October 2022 and 35% in April 2022.\n \nThe number of Exchanges that possess an ISO 27001, SOC2 certificate, or similar, has increased from 24% in October 2022 to 30% in April 2023. 34% also employ the service of a  custody provider, increasing from 26% in October 2022.  ",
+      "time": "10.30 AM",
+      "archived": true,
       "read": false
     },
     {
+      "id": 4,
+      "from": "learn@email1.asana.com",
+      "subject": "5 tips to save time with Asana",
+      "body": "At Asana Forward, we peeked into the future. \n\nWe previewed what's next with Asana's platform, and showed you how The Work Innovation Lab—powered by Collaborative Intelligence—can unlock breakthroughs at your company.\n\nWe have a few resources from the event to help you make faster decisions and adapt to whatever the future of work holds:",
+      "time": "10.30 AM",
+      "archived": true,
+      "read": true
+    },
+    {
       "id": 5,
-      "from": "test5@gmail.com",
-      "subject": "song about agsegseg",
-      "body": "gsegseghsehgse hseah shsrdh drh dh drhdr hdrhdr framework that provides a robust set of features for web and mobile ",
-      "time": "",
+      "from": "Coursera@email.coursera.org",
+      "subject": "Get a Masters degree in International Relations, Security, and Strategy",
+      "body": "The Master of Arts in International Relations, Security, and Strategy from O.P. Jindal Global University has been designed to help students and working professionals from around the world open the door to a career path in the ever-expanding streams of civil and diplomatic services, conflict resolution, political journalism, international justice and international economic development.\n\nBy enrolling in this online degree, you will have the opportunity to learn from renowned International Relations academics, experts, and regional specialists who will bring their real-world experience to the virtual classroom.\n",
+      "time": "10.30 AM",
       "archived": false,
       "read": false
     },
     {
       "id": 6,
-      "from": "test6@gmail.com",
-      "subject": "song about agsegseg",
-      "body": "gsegseghsehgse  a robust set of features for web and mobile ",
-      "time": "",
+      "from": "newsletter@investingmail.com",
+      "subject": "Tech earnings, debt ceiling wrangling and GDP data ahead",
+      "body": "Investors are awaiting U.S. economic growth data, all while digesting results from Facebook owner Meta and looking ahead to Amazon's latest earnings. Elsewhere, House Republicans pass a new debt ceiling bill, but the political wrangling in Washington over the issue looks to be far from finished.",
+      "time": "10.30 AM",
       "archived": false,
       "read": false
     }

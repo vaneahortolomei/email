@@ -1,0 +1,19 @@
+.user {
+    &__header {
+        margin-right: 20px;
+    }
+    &__name {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    &__email {
+        font-size: 12px;
+        color: var(--second-text-color)
+    }
+    &__img {
+        border-radius: 50%;
+        width: 50px;
+        height: auto;
+        border: 3px solid var(--violet-color);
+    }
+}

@@ -50,7 +50,7 @@ export const useEmailSelection = () => {
     };
 
     const updateEmail = (email) => {
-        EmailEvents.putEmailsList(email.id, email).then(r => r);
+        EmailEvents.putEmailsList(email.id, email).then(response => response);
     };
 
     return {

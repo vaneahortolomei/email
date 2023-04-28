@@ -1,0 +1,6 @@
+.button.button--violet {
+    background: var(--violet-color);
+    &:hover {
+        background: var(--violet-color-hover);
+    }
+}

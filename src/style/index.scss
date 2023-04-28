@@ -1,7 +1,17 @@
-@import "modal";
+@import "./modal/index";
+@import "./buttons/index";
+@import "./tab/index";
+@import "./controls/index";
+@import "./email-list/index";
+@import "./container/index";
+@import "./menu/index";
+@import "main-page";
+@import "emails-page";
+@import "fade";
+@import "list-wrapper";
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    //font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
@@ -12,10 +22,16 @@
     --brown-color: #775f41;
     --black-color: #646464;
     --gray-color: #646464;
+    --second-color: #f6f7fb;
+    --text-color: #000832;
+    --second-text-color: #4e5370;
+    --violet-color: #ecedff;
+    --violet-color-hover: #b8bbe3;
+    --blue-color: #0020c1;
 
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    //color-scheme: light dark;
+    //color: rgba(255, 255, 255, 0.87);
+    //background-color: #242424;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -24,152 +40,61 @@
     -webkit-text-size-adjust: 100%;
 }
 
-a {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-}
-
-a:hover {
-    color: #535bf2;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
 }
 
 body {
+    color: var(--text-color);
+    background-color: var(--white-color);
+    transition: color 0.5s, background-color 0.5s;
+    line-height: 1.6;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     margin: 0;
-    padding: 0;
 }
 
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-}
-
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.25s;
-}
-
-button:hover {
-    border-color: #646cff;
-}
 
 button:focus,
 button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
 
-
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-    a:hover {
-        color: #747bff;
-    }
-    button {
-        background-color: #f9f9f9;
-    }
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    position: relative;
-    font-weight: normal;
+a {
+    text-decoration: none;
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
-.container {
-    position: relative;
-    min-width: 320px;
-    padding: 0 20px;
-    margin: 0 auto;
-    width: 100%;
-    @media(min-width: 1025px) {
-        max-width: 1200px;
-    }
-
-    &--top {
-        margin-top: 50px;
-    }
+.wrapper {
+    min-height: 100vh;
+    word-break: break-word;
 }
 
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
-}
-
-.list {
-    display: grid;
-    grid-gap: 10px;
-    grid-row-gap: 10px;
-    padding: 0;
-    margin: 20px 0;
-    list-style-type: none;
-    grid-template-columns: 1fr;
-    &__item {
-        background: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        color: #1a1a1a;
-        transition: all 0.5s;
-        &:hover {
-            cursor: pointer;
-            box-shadow: 3px 1px 11px 5px gray;
-        }
-        &--active {
-            background: #42b6a4;
-            color: #1a1a1a;
-        }
-    }
-}
-
-.button-list {
+.wrapper, .wrapper > .content {
     display: flex;
-    list-style-type: none;
-    padding: 0;
-    align-items: center;
-    margin: 15px 0;
-    &__button {
-        + .button-list__button {
-            margin-left: 15px;
-        }
-    }
-    .marker {
-        margin-right: 15px;
-    }
+    flex-direction: column;
 }
-.body-item {
-    display: flex;
-    &__header {
-        flex: 1 0 5%;
-    }
-    &__body {
-        flex: 1 0 95%;
-    }
+
+.wrapper > .content {
+    flex-shrink: 0;
+    flex-grow: 1;
 }
-.tab {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+
+@media(max-width: 992px) {
+    .body--fixed {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
 }

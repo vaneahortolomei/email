@@ -1,0 +1,7 @@
+.tab {
+    &__button {
+        + .tab__button {
+            margin-left: 15px;
+        }
+    }
+}

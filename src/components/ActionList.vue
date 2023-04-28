@@ -1,5 +1,5 @@
 <template>
-  <ul class="button-list">
+  <ul class="controls controls--email-controls">
     <label for="marked" />
     <input
       id="marked"
@@ -9,36 +9,39 @@
       :checked="allEmailsChecked"
       @click="useAction"
     >
-    <li class="button-list__button">
-      <button @click="emailSelection.markRead()">
-        MarkRead
+    <li class="controls__item">
+      <button
+        class="button"
+        @click="emailSelection.markRead()"
+      >
+        ReadLetters({{ readLettersLength.length }})
       </button>
     </li>
-    <li class="button-list__button">
-      <button @click="emailSelection.markUnread()">
-        MarkUnread
+    <li class="controls__item">
+      <button
+        class="button"
+        @click="emailSelection.markUnread()"
+      >
+        UnreadLetters({{ unreadLettersLength.length }})
       </button>
     </li>
-    <li class="button-list__button">
-      <button @click="emailSelection.archived()">
+    <li class="controls__item">
+      <button
+        class="button"
+        @click="emailSelection.archived()"
+      >
         Archived
       </button>
     </li>
-    <li class="button-list__button">
-      <button @click="emailSelection.desarchived()">
-        Desarchived
-      </button>
-    </li>
-    <li class="button-list__button">
-      <button @click="emailSelection.clear()">
-        ClearCheckbox
+    <li class="controls__item">
+      <button
+        class="button"
+        @click="emailSelection.desarchived()"
+      >
+        Inbox
       </button>
     </li>
   </ul>
-
-  {{ emailLength }}
-  {{ numberSelected }}
-  {{ allEmailsChecked }}
 </template>
 
 <script>
@@ -54,10 +57,23 @@
             },
         },
         setup(props) {
+
             const emailSelection = useEmailSelection();
             const numberSelected = computed(() => emailSelection.selected.size);
             const emailLength = computed(() => props.emails.length);
             const allEmailsChecked = computed(() => numberSelected.value === emailLength.value);
+
+            const readLettersLength = computed(() => {
+                return props.emails.filter(item => {
+                    return item.read;
+                });
+            });
+
+            const unreadLettersLength = computed(() => {
+                return props.emails.filter(item => {
+                    return !item.read;
+                });
+            });
 
             const useAction = () => {
                 if (allEmailsChecked.value) {
@@ -73,6 +89,8 @@
                 numberSelected,
                 allEmailsChecked,
                 useAction,
+                readLettersLength,
+                unreadLettersLength,
             };
         },
     };

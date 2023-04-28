@@ -1,32 +1,43 @@
 <template>
-  <section style="margin-bottom: 100px">
-    <header><h2>NewEmails</h2></header>
-    <span>{{ filteredEmails.length }} email/emails</span>
-    <span>{{ archivedEmails.selected.size }} selected emails</span>
-
-    <div class="tab">
-      <button @click="selectScreen('inbox')">
+  <div class="emails-page">
+    <header class="emails-page__header header">
+      <h2 class="header__title">
+        Emails
+      </h2>
+      <p class="header__info">
+        {{ filteredEmails.length }} messages
+      </p>
+    </header>
+    <div class="emails-page__tab tab">
+      <button
+        class="button button--violet tab__button"
+        @click="selectScreen('inbox')"
+      >
         Inbox
       </button>
-      <button @click="selectScreen('archived')">
-        Archived
+      <button
+        class="button button--violet tab__button"
+        @click="selectScreen('archived')"
+      >
+        Archived Emails
       </button>
     </div>
+    <div class="list-wrapper">
+      <ActionList :emails="filteredEmails" />
+    </div>
 
-    <ActionList :emails="filteredEmails" />
     <ul
       v-if="filteredEmails.length > 0"
-      class="list"
+      class="emails-page__email-list email-list"
     >
       <li
         v-for="email in filteredEmails"
         :key="email.id"
-        class="list__item"
-        :class="{'list__item--active': email.read}"
+        class="email-list__item"
+        :class="{'email-list__item--active': email.read}"
       >
-        <div class="body-item">
-          <div class="body-item__header">
-            <span style="margin-right: 5px">{{ email.id }}</span>
+        <div class="email-item">
+          <div class="email-item__header">
             <label for="checkbox" />
             <input
               id="checkbox"
@@ -36,22 +47,24 @@
               @click="archivedEmails.toggle(email)"
             >
           </div>
-          <div class="body-item__body">
-            <div @click="openEmail(email)">
+          <div class="email-item__body email-body">
+            <div
+              class="email-body__title"
+              @click="openEmail(email)"
+            >
               {{ email.subject }}
             </div>
-            <span>{{ email.time }}</span>
+            <time class="email-body__time">{{ email.time }}</time>
           </div>
         </div>
       </li>
     </ul>
     <p
       v-else
-      style="margin: 30px 0"
     >
       Inbox is empty
     </p>
-  </section>
+  </div>
 
   <Modal
     v-if="openBody"

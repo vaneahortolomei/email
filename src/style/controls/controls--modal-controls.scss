@@ -1,0 +1,21 @@
+.controls.controls--modal-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    .controls__item {
+        button {
+            padding: 0;
+            color: var(--second-text-color);
+            outline: none;
+            &:hover {
+                color: var(--blue-color);
+            }
+        }
+        &:last-child {
+            padding-right: 20px;
+        }
+        + .controls__item {
+            margin-left: 15px;
+        }
+    }
+}

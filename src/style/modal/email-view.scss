@@ -1,0 +1,15 @@
+.email-view {
+    text-align: left;
+    @media(min-width: 768px){
+        padding: 0 20px;
+    }
+    &__email, &__subject, &__body {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    &__option {
+        font-size: 12px;
+        color: var(--second-text-color);
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,17 @@
+.list-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+    //box-shadow: 0 3px 4px rgba(36,79,152,.15);
+    overflow: auto;
+    z-index: 1;
+    -webkit-overflow-scrolling: touch;
+
+    @media(max-width: 768px){
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 0 20px;
+    }
+}

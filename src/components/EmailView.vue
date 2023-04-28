@@ -1,26 +1,23 @@
 <template>
   <div class="email-view">
-    <ul class="button-list">
-      <li class="button-list__button">
-        <button @click="archivedEmail(email)">
+    <ul class="email-view__controls controls controls--modal-controls">
+      <li class="controls__item">
+        <button class="button" @click="archivedEmail(email)">
           {{ email.archived ? 'Desarchived' : 'Archived' }}
         </button>
       </li>
-      <li class="button-list__button">
-        <button @click="readEmail(email)">
+      <li class="controls__item">
+        <button class="button" @click="readEmail(email)">
           {{ email.read ? 'Unread' : 'Read' }}
         </button>
       </li>
-      <li class="button-list__button">
-        <button>New</button>
-      </li>
-      <li class="button-list__button">
-        <button>Old</button>
-      </li>
     </ul>
-    <p>From: {{ email.from }}</p>
-    <h2>{{ email.subject }}</h2>
-    <p>{{ email.body }}</p>
+    <p class="email-view__email">
+      <span class="email-view__option">From:</span> {{ email.from }}</p>
+    <h2 class="email-view__subject">
+      <span class="email-view__option">Subject:</span>{{ email.subject }}</h2>
+    <p class="email-view__body">
+      <span class="email-view__option">Body:</span>{{ email.body }}</p>
   </div>
 </template>
 

@@ -147,11 +147,15 @@ img {
     display: flex;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    align-items: center;
+    margin: 15px 0;
     &__button {
         + .button-list__button {
             margin-left: 15px;
         }
+    }
+    .marker {
+        margin-right: 15px;
     }
 }
 .body-item {
@@ -162,4 +166,10 @@ img {
     &__body {
         flex: 1 0 95%;
     }
+}
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }

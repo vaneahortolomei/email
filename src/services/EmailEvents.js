@@ -4,6 +4,7 @@ const emails = axios.create({
     baseURL: "http://localhost:9000",
     withCredentials: false,
     headers: {
+        withCredentials: true,
         "Accept": "application/json",
         "Content-Type": "application/json",
         'Access-Control-Allow-Origin' : '*',

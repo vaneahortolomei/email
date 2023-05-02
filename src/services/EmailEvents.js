@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const emails = axios.create({
-    baseURL: "http://localhost:9000",
-    withCredentials: false,
+    baseURL: "https://dbjs.netlify.app",
+    withCredentials: true,
     headers: {
         "Accept": "application/json",
         "Content-Type": "application/json",

@@ -42,7 +42,7 @@
       "subject": "Get a Masters degree in International Relations, Security, and Strategy",
       "body": "The Master of Arts in International Relations, Security, and Strategy from O.P. Jindal Global University has been designed to help students and working professionals from around the world open the door to a career path in the ever-expanding streams of civil and diplomatic services, conflict resolution, political journalism, international justice and international economic development.\n\nBy enrolling in this online degree, you will have the opportunity to learn from renowned International Relations academics, experts, and regional specialists who will bring their real-world experience to the virtual classroom.\n",
       "time": "10.30 AM",
-      "archived": false,
+      "archived": true,
       "read": false
     },
     {
@@ -52,7 +52,7 @@
       "body": "Investors are awaiting U.S. economic growth data, all while digesting results from Facebook owner Meta and looking ahead to Amazon's latest earnings. Elsewhere, House Republicans pass a new debt ceiling bill, but the political wrangling in Washington over the issue looks to be far from finished.",
       "time": "10.30 AM",
       "archived": false,
-      "read": false
+      "read": true
     }
   ]
 }

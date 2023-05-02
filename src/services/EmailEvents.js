@@ -2,9 +2,8 @@ import axios from "axios";
 
 const emails = axios.create({
     baseURL: "//localhost:9000",
-    withCredentials: false,
+    withCredentials: true,
     headers: {
-        withCredentials: true,
         "Accept": "application/json",
         "Content-Type": "application/json",
         'Access-Control-Allow-Origin' : '*',

@@ -7,7 +7,7 @@
       "body": "This email contains secure links that are personalized for you. Please do not share this email or links with others.\nSalaries estimated if unavailable. When a job posting doesn't include a salary, we estimate it by looking at similar jobs. Estimated salaries are not endorsed by the companies offering those positions and may vary from actual salaries.",
       "time": "10.30 AM",
       "archived": true,
-      "read": true
+      "read": false
     },
     {
       "id": 2,
@@ -24,8 +24,8 @@
       "subject": "Key Findings and Grades From CCData's April Exchange Benchmark",
       "body": "In April 2023, 15% of analysed exchanges were deemed to have inadequate KYC practices according to Ciphertrace. While this is in part due to the closure of poor, underperforming exchanges, it is an improvement from 21% in October 2022 and 35% in April 2022.\n \nThe number of Exchanges that possess an ISO 27001, SOC2 certificate, or similar, has increased from 24% in October 2022 to 30% in April 2023. 34% also employ the service of a  custody provider, increasing from 26% in October 2022.  ",
       "time": "10.30 AM",
-      "archived": true,
-      "read": false
+      "archived": false,
+      "read": true
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "body": "At Asana Forward, we peeked into the future. \n\nWe previewed what's next with Asana's platform, and showed you how The Work Innovation Lab—powered by Collaborative Intelligence—can unlock breakthroughs at your company.\n\nWe have a few resources from the event to help you make faster decisions and adapt to whatever the future of work holds:",
       "time": "10.30 AM",
       "archived": true,
-      "read": true
+      "read": false
     },
     {
       "id": 5,

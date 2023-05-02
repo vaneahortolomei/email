@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const emails = axios.create({
-    baseURL: "http://localhost:9000",
+    baseURL: "//localhost:9000",
     withCredentials: false,
     headers: {
         withCredentials: true,
